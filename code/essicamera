@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# model_file_number=$# 
+# model_file=$@
+# feicheck model_file
+
+
+visitlib=$(find / /usr /home -xdev -name visit 2>/dev/null | grep /lib/site-packages/visit | head -n 1)
+visitdir=${visitlib%/site-packages*}
+export LD_LIBRARY_PATH=${visitdir}
+
+essicamera.py $@
+
+
+rm visitlog.py
