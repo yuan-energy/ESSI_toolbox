@@ -22,6 +22,7 @@ for i in range(model_file_number):
 
 #remove the comments lines
 model_all=re.sub("\/\/.*", "", model_all)
+model_all=re.sub("include.*", "", model_all)
 
 model_line=model_all.splitlines()
 model_line_number=len(model_line)
@@ -33,22 +34,15 @@ node_number = model_all.count('add node')
 
 
 
-
-
 #--------------------------------------------------------------
 # Pattern definition 
 #--------------------------------------------------------------
 pattern_name=re.compile('model name "(\w)*" *;.*')
-# pattern_node=re.compile('add node (#|No) *[0-9]+ at *\(( *-*[0-9]+\.*([0-9]+)*\*[a-zA-Z]*,){2} *-*[0-9]+\.*([0-9]+)*\*[a-zA-Z]*\).*')
-pattern_node=re.compile('add node (#|No) *[0-9]+ at.*')
-pattern_8nodebrick=re.compile('add element (#|No) *[0-9]+ type 8NodeBrick(\w)* with nodes *\(( *[0-9]+,){7} *[0-9]+.*')
-pattern_27nodebrick=re.compile('add element (#|No) *[0-9]+ type 27NodeBrick(\w)* with nodes *\(( *[0-9]+,){26} *[0-9]+.*')
-pattern_4nodeandes=re.compile('add element (#|No) *[0-9]+ type 4NodeShell_ANDES(\w)* with nodes.*')
+pattern_node=re.compile('add node (#|No) .*[0-9]+ at.*')
+pattern_8nodebrick=re.compile('add element (#|No) .*[0-9]+ type 8NodeBrick(\w)* with nodes.*')
+pattern_27nodebrick=re.compile('add element (#|No) .*[0-9]+ type 27NodeBrick(\w)* with nodes.*')
+pattern_4nodeandes=re.compile('add element (#|No) .*[0-9]+ type 4NodeShell_ANDES(\w)* with nodes.*')
  
-# just check the mesh, so no time_steps are required...
-# pattern_Time_Steps=re.compile('simulate [0-9]+ steps using')
-
-
 
 
 
