@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+if [ "$1" != "-d" ]; then
+  for file_in in $@
+  do file_out=${file_in%.*}.png
+    inkscape --without-gui ${file_in} --export-png=${file_out}
+  done
+fi
+
+
+if [ "$1" == "-d" ]; then
+	shift
+	for file_in in $@
+	do file_out=${file_in%.*}.png
+	inkscape --without-gui ${file_in} --export-png=${file_out}
+	done
+	rm $@
+fi
+
+
+
+
+
