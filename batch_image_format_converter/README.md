@@ -11,11 +11,11 @@ sudo apt-get install inkscape
 
 Place these scripts in your ~/bin
 
-Example: 
+#Example: 
 
-#run 
+##run 
 svg2pdf *.svg
 
 
-# If you want to delete the *.svg after the conversion, run 
+##If you want to delete the *.svg after the conversion, run 
 svg2pdf -d *.svg
