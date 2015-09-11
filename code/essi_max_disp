@@ -1,18 +1,27 @@
 #!/usr/bin/python
-
 import h5py
 import sys
+import numpy as np
+
 
 h5in_file_name=sys.argv[1]
 
 h5file_in=h5py.File(h5in_file_name,"r")
 
-disp=h5file_in['/Model/Nodes/Generalized_Displacements']
+# [()] is a must. Otherwise, disp will be a dataset, not an array.
+disp=h5file_in['/Model/Nodes/Generalized_Displacements'][()]
 
-disp=map(float, disp)
-abs_disp=map(abs,disp)
+# axis =0 is a must. Otherwise, disp will be sorted along the first axis.
+disp=np.sort(disp,axis=0)
 
-max_disp=max(abs_disp)
+# If disp[0] is negative, this will return the positive value.
+# Elseif disp[0] is positive, disp[0] will be the smaller positive value 
+# in the sorted array. 
+disp[0]=-disp[0]
 
+# disp[-1] is the last (biggest) element in the sorted array. 
+max_disp=max(disp[0],disp[-1])
 
 print ("%16.8f" %max_disp)
+
+exit()
