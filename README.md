@@ -12,7 +12,13 @@ Scripts to plot the time series, FFT, spectrum response.
 Scripts to calculate shear/compressive wave velocity
 
 
+#####  seismosignal2essi
+Convert SeismoSignal output to Real-ESSI input
+
+
 
 ##### Acknowledgement
-https://github.com/sumeetsinha
-https://github.com/hexiang6666/
+Some code snippets are borrowed/translated from my colleagues.
+https://github.com/sumeetsinha/Python-Scripts/
+https://github.com/hexiang6666/RealESSI_miscellaneous/
+
