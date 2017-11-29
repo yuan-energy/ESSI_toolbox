@@ -13,3 +13,6 @@ Scripts to calculate shear/compressive wave velocity
 
 
 
+##### Acknowledgement
+https://github.com/sumeetsinha
+https://github.com/hexiang6666/
