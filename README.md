@@ -1,12 +1,15 @@
-# ESSI_toolbox
-Check fei files before ESSI run. Post-process ESSI result automatically.
+### ESSI_toolbox
 
-ESSI:
-http://sokocalo.engr.ucdavis.edu/~jeremic/ESSI_Simulator/
+#####  hdf5output
+Basic scripts to process the HDF5 output of Real-ESSI
 
-Script is based on Jose's plugin for visit:
-Jose's plugin:
-https://github.com/jaabell/visitESSI
 
-visit:
-https://wci.llnl.gov/simulation/computer-codes/visit/
+#####  plot 
+Scripts to plot the time series, FFT, spectrum response.
+
+
+#####  calculation_helper
+Scripts to calculate shear/compressive wave velocity
+
+
+
