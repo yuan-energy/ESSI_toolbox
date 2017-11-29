@@ -17,7 +17,7 @@ Convert SeismoSignal output to Real-ESSI input
 
 
 
-##### Acknowledgement
+##### Acknowledgment
 Some code snippets are borrowed/translated from my colleagues.
 https://github.com/sumeetsinha/Python-Scripts/
 https://github.com/hexiang6666/RealESSI_miscellaneous/
