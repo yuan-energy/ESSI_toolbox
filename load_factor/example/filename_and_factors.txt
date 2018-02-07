@@ -1,0 +1,2 @@
+case_in1.feioutput 1.2
+case_in2.feioutput 1.5
